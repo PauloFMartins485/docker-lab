@@ -1,4 +1,4 @@
-# docker-lab
+# docker-lab (em desenvolvimento...)
 
 # Subindo Docker da API Notes
 
@@ -11,7 +11,7 @@
 ```docker run -p 8080:8080 --name notes-api -d notes-api```
 
 API usada no lab:
-https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial/tree/master
+[https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial/tree/master](https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial)
 
 # Subindo Docker do MySQL
 
