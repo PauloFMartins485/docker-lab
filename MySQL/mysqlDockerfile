@@ -1,0 +1,14 @@
+# Use a imagem oficial do MySQL no Docker Hub
+FROM mysql:latest
+
+# Informe as credenciais do banco de dados
+ENV MYSQL_ROOT_PASSWORD=root_password
+ENV MYSQL_DATABASE=my_database
+ENV MYSQL_USER=my_user
+ENV MYSQL_PASSWORD=my_password
+
+# Copie os scripts de inicialização para a pasta do contêiner
+COPY ./scripts/ /docker-entrypoint-initdb.d/
+
+# Exponha a porta do MySQL
+EXPOSE 3306

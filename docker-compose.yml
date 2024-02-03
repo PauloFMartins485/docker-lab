@@ -1,0 +1,30 @@
+version: '3'
+
+networks:
+  my_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.50.0.0/16"
+
+services:
+  notes-api:
+    build:
+      context: ./Notes
+      dockerfile: notesDockerfile
+    ports:
+      - "8001:80"
+    networks:
+      my_network:
+        ipv4_address: "172.50.0.2"
+
+  notes-database:
+    build:
+      context: ./MySQL
+      dockerfile: mysqlDockerfile
+    ports:
+      - "3306:3306"
+    networks:
+      my_network:
+        ipv4_address: "172.50.0.3"

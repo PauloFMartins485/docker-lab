@@ -1,4 +1,4 @@
-FROM maven:3.5-jdk-8 as buildstage
+FROM maven:3.8.7-openjdk-18 as buildstage
 RUN mkdir /opt/note
 WORKDIR /opt/note
 RUN git clone https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial.git /opt/note
